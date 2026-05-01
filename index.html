@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Thin background lines for editorial look -->
+    <div class="grid-lines" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- Main page wrapper keeps content centered -->
     <div class="page-wrapper">
       <!-- Navigation -->
       <header class="site-header" id="home">
         <nav class="navbar">
-          <a class="logo" href="#home">MHF<span class="logo-dot">.</span></a>
+          <a class="logo" href="#home">SKA<span class="logo-dot">.</span></a>
 
           <ul class="nav-links">
             <li><a href="#home">Home</a></li>
@@ -21,9 +27,12 @@
           </ul>
 
           <div class="nav-actions">
+            <!-- Theme toggle button (light/dark mode) -->
             <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
               Dark
             </button>
+
+            <!-- Simple circular menu icon -->
             <button class="menu-icon" aria-label="Menu">
               <span></span>
             </button>
@@ -31,89 +40,92 @@
         </nav>
       </header>
 
-      <!-- Split-screen hero -->
-      <section class="hero" aria-label="Editorial hero section">
-        <div class="hero-left">
-          <h1>
-            <span>Minimal Code.</span>
-            <span>Maximum Impact.</span>
-            <span class="hero-accent" aria-hidden="true"></span>
-          </h1>
-          <p>
-            I'm a beginner web developer learning to build clean websites and simple digital tools that are actually useful.
-          </p>
+      <!-- Hero Section -->
+      <section class="hero section-spacing">
+        <h1>
+          Minimal Code.<br />
+          Maximum Impact
+          <span class="hero-accent" aria-hidden="true"></span>
+        </h1>
 
-          <a href="#projects" class="cta-button">View Projects</a>
+        <p>
+          I build clean websites and simple digital tools for small businesses.
+        </p>
 
-          <div class="social-links" aria-label="Social links">
-            <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="mailto:yourname@email.com">Email</a>
-          </div>
-        </div>
+        <a href="#projects" class="cta-button">View Projects</a>
+      </section>
 
-        <div class="hero-right" aria-hidden="true">
-          <div class="editorial-panel">
-            <div class="panel-overlay"></div>
-            <div class="red-bar"></div>
-          </div>
+      <!-- Projects Section -->
+      <section class="projects section-spacing" id="projects">
+        <h2>Projects</h2>
 
-          <div class="slide-indicator">
-            <span>01 / 03</span>
-            <i></i>
-          </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>
+              A modern personal site focused on clear typography, simple sections,
+              and strong visual identity.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3>Business Landing Page</h3>
+            <p>
+              A conversion-focused page for small businesses to present services,
+              testimonials, and contact information.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3>Booking Form</h3>
+            <p>
+              A clean appointment request form with mobile-friendly layout and
+              straightforward user experience.
+            </p>
+          </article>
         </div>
       </section>
 
-      <main>
-        <section class="projects section-spacing" id="projects">
-          <h2>Projects</h2>
-          <div class="project-grid">
-            <article class="project-card">
-              <h3>Portfolio Website</h3>
-              <p>A personal website project where I practiced layout, spacing, and writing clearer content about who I am.</p>
-            </article>
-            <article class="project-card">
-              <h3>Business Landing Page</h3>
-              <p>A simple landing page concept I built to learn how to present services in a clean, focused way.</p>
-            </article>
-            <article class="project-card">
-              <h3>Booking Form</h3>
-              <p>A beginner-friendly booking form exercise focused on usability, clear labels, and mobile responsiveness.</p>
-            </article>
-          </div>
-        </section>
+      <!-- About Section -->
+      <section class="about section-spacing" id="about">
+        <h2>About</h2>
+        <p>
+          I am learning web development with a focus on clean design, practical
+          websites, and simple business solutions.
+        </p>
+      </section>
 
-        <section class="about section-spacing" id="about">
-          <h2>About</h2>
-          <p>
-            I'm currently learning web development step by step. I enjoy turning ideas into clean, practical websites
-            and small digital tools that solve everyday problems.
-          </p>
-        </section>
+      <!-- Skills Section -->
+      <section class="skills section-spacing" id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>GitHub</li>
+          <li>Responsive Design</li>
+        </ul>
+      </section>
 
-        <section class="skills section-spacing" id="skills">
-          <h2>Skills</h2>
-          <ul class="skills-list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>GitHub</li>
-            <li>Responsive Design</li>
-          </ul>
-        </section>
-
-        <section class="contact section-spacing" id="contact">
-          <h2>Contact</h2>
-          <div class="contact-grid">
-            <p>I'm open to beginner-friendly freelance projects, collaborations, and learning opportunities.
-              Email: yourname@email.com</p>
-            <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer">WhatsApp</a>
-            <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
-        </section>
-      </main>
+      <!-- Contact Section -->
+      <section class="contact section-spacing" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <p>Email: yourname@email.com</p>
+          <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer"
+            >WhatsApp</a
+          >
+          <a href="https://github.com/yourusername" target="_blank" rel="noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+      </section>
     </div>
 
     <script src="script.js"></script>
