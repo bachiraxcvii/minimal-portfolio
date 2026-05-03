@@ -3,22 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MHF. | Minimal Portfolio</title>
+    <title>SZ. | Home</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Shared site wrapper used across all pages -->
     <div class="page-wrapper">
-      <header class="site-header" id="home">
+      <header class="site-header">
         <nav class="navbar">
-          <a class="logo" href="#home">SZ<span class="logo-dot">.</span></a>
-
+          <a class="logo" href="index.html">SZ<span class="logo-dot">.</span></a>
           <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
-
           <div class="nav-actions">
             <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">Dark</button>
             <button class="menu-icon" aria-label="Menu"><span></span></button>
@@ -26,240 +25,45 @@
         </nav>
       </header>
 
-      <!-- Hero: added eyebrow, support lines, stats, and feature panel -->
-      <section class="hero" aria-label="Editorial hero section">
-        <div class="hero-left">
-          <p class="eyebrow">BEGINNER WEB DEVELOPER</p>
-
-          <h1>
-            <span>Minimal Code.</span>
-            <span>Maximum Impact.</span>
-            <span class="hero-accent" aria-hidden="true"></span>
-          </h1>
-
-          <p class="hero-subtitle">
-            I'm a beginner web developer learning to build clean websites and simple digital tools that are actually
-            useful.
-          </p>
-
-          <div class="hero-support-lines">
-            <p>Focused on clean design.</p>
-            <p>Learning by building real projects.</p>
-          </div>
-
-          <a href="#projects" class="cta-button">View Projects</a>
-
-          <div class="hero-stats" aria-label="Portfolio stats">
-            <p><strong>01</strong> Live Website</p>
-            <p><strong>03</strong> Practice Projects</p>
-            <p><strong>100%</strong> Learning Mode</p>
-          </div>
-
-          <div class="social-links" aria-label="Social links">
-            <a href="https://github.com/bachiraxcvii" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/harithfikri" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="mailto:harithf10@gmail.com">Email</a>
-          </div>
-        </div>
-
-        <div class="hero-right" aria-hidden="true">
-          <div class="editorial-panel">
-            <div class="panel-overlay"></div>
-            <div class="red-bar"></div>
-          </div>
-
-          <aside class="feature-box">
-            <p class="feature-label">Currently Building</p>
-            <ul>
-              <li>Portfolio Website</li>
-              <li>Business Landing Page</li>
-              <li>Booking Form</li>
-            </ul>
-          </aside>
-
-          <div class="slide-indicator"><span>01 / 03</span><i></i></div>
-        </div>
-      </section>
-
+      <!-- Home page intentionally short and focused -->
       <main>
-        <section class="projects section-spacing" id="projects">
-          <h2>Projects</h2>
+        <section class="hero home-hero">
+          <div class="hero-left">
+            <p class="eyebrow">BEGINNER WEB DEVELOPER</p>
+            <h1>
+              <span>Minimal Code.</span>
+              <span>Maximum Impact.</span>
+              <span class="hero-accent" aria-hidden="true"></span>
+            </h1>
+            <p class="hero-subtitle">I build clean websites and simple digital tools while learning step by step.</p>
+            <div class="button-row">
+              <a class="cta-button" href="projects.html">View Projects</a>
+              <a class="secondary-button" href="about.html">About Me</a>
+            </div>
+          </div>
+          <div class="hero-right" aria-hidden="true">
+            <div class="editorial-panel"><div class="panel-overlay"></div><div class="red-bar"></div></div>
+          </div>
+        </section>
+
+        <section class="section-spacing">
+          <h2>Featured Projects</h2>
           <div class="project-grid">
-            <article class="project-card">
-              <span class="project-status">Live</span>
-              <h3>Portfolio Website</h3>
-              <p>A personal website project where I practiced layout, spacing, and writing clearer content.</p>
-              <a href="#" class="card-link">View Demo</a>
-            </article>
-
-            <article class="project-card">
-              <span class="project-status">Practice</span>
-              <h3>Business Landing Page</h3>
-              <p>A simple landing page concept I built to learn how to present services in a clean, focused way.</p>
-              <a href="#" class="card-link">View Details</a>
-            </article>
-
-            <article class="project-card">
-              <span class="project-status">Next</span>
-              <h3>Booking Form</h3>
-              <p>A beginner-friendly booking form exercise focused on clear labels and mobile responsiveness.</p>
-              <a href="#" class="card-link">View Details</a>
-            </article>
+            <article class="project-card"><span class="project-status">Live</span><h3>Portfolio Website</h3><p>My first live project focused on layout and responsive structure.</p><a class="card-link" href="projects.html">View Project</a></article>
+            <article class="project-card"><span class="project-status">Practice</span><h3>Business Landing Page</h3><p>A sample local-business page for services, pricing, and contact.</p><a class="card-link" href="projects.html">View Project</a></article>
+            <article class="project-card"><span class="project-status">Next</span><h3>Booking Form</h3><p>A simple appointment form project to practice user input.</p><a class="card-link" href="projects.html">View Project</a></article>
           </div>
         </section>
 
-        <!-- About: expanded into two-column structure -->
-        <section class="about section-spacing" id="about">
-          <h2>About</h2>
-          <div class="about-grid">
-            <p>
-              I'm currently learning web development step by step. I enjoy turning ideas into clean, practical
-              websites and small digital tools that solve everyday problems.
-            </p>
-            <div>
-              <h3>What I focus on</h3>
-              <ul class="focus-list">
-                <li>Clean layouts</li>
-                <li>Responsive design</li>
-                <li>Simple business websites</li>
-                <li>Beginner-friendly code</li>
-                <li>Learning with AI tools while understanding the code</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section class="skills section-spacing" id="skills">
-          <h2>Skills</h2>
-          <div class="skills-groups">
-            <div class="skill-group">
-              <h3>Core</h3>
-              <ul class="skills-list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-              </ul>
-            </div>
-            <div class="skill-group">
-              <h3>Tools</h3>
-              <ul class="skills-list">
-                <li>GitHub</li>
-                <li>Codex</li>
-                <li>VS Code</li>
-              </ul>
-            </div>
-            <div class="skill-group">
-              <h3>Design</h3>
-              <ul class="skills-list">
-                <li>Responsive Design</li>
-                <li>Minimal UI</li>
-                <li>Layout</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-
-        <section class="currently-building section-spacing" id="building">
+        <section class="section-spacing">
           <h2>Currently Building</h2>
-          <div class="build-grid">
-            <article class="build-card">
-              <h3>Portfolio Website</h3>
-              <p>A personal website to practice layout, responsive design, GitHub workflow, and deployment.</p>
-            </article>
-            <article class="build-card">
-              <h3>Business Landing Page</h3>
-              <p>A sample website for a small local business with services, pricing, and WhatsApp contact.</p>
-            </article>
-            <article class="build-card">
-              <h3>Booking Form</h3>
-              <p>A simple appointment form to practice JavaScript, forms, and user input.</p>
-            </article>
-          </div>
+          <p class="muted">I am currently improving my portfolio, building small business templates, and learning cleaner front-end workflows.</p>
         </section>
 
-        <section class="case-study section-spacing" id="case-study">
-          <h2>Case Study: This Portfolio</h2>
-          <div class="case-grid">
-            <article>
-              <h3>Goal</h3>
-              <p>Build and publish my first live website.</p>
-            </article>
-            <article>
-              <h3>What I practiced</h3>
-              <ul>
-                <li>HTML structure</li>
-                <li>CSS layout</li>
-                <li>Mobile responsiveness</li>
-                <li>GitHub workflow</li>
-                <li>GitHub Pages deployment</li>
-                <li>Iterating with Codex and reviewing changes</li>
-              </ul>
-            </article>
-            <article>
-              <h3>What I improved</h3>
-              <ul>
-                <li>Visual layout</li>
-                <li>Spacing</li>
-                <li>Typography</li>
-                <li>Project cards</li>
-                <li>Dark mode</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-        <section class="how-i-work section-spacing" id="process">
-          <h2>How I Work</h2>
-          <ol>
-            <li><strong>01</strong> Understand the goal</li>
-            <li><strong>02</strong> Build a simple version</li>
-            <li><strong>03</strong> Test on mobile</li>
-            <li><strong>04</strong> Improve the design</li>
-            <li><strong>05</strong> Deploy and learn</li>
-          </ol>
-        </section>
-
-
-        <section class="roadmap section-spacing" id="roadmap">
-          <h2>Learning Roadmap</h2>
-          <div class="roadmap-grid">
-            <article>
-              <h3>Now</h3>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Responsive design</li>
-              </ul>
-            </article>
-            <article>
-              <h3>Next</h3>
-              <ul>
-                <li>React</li>
-                <li>Tailwind CSS</li>
-                <li>Supabase</li>
-              </ul>
-            </article>
-            <article>
-              <h3>Later</h3>
-              <ul>
-                <li>Authentication</li>
-                <li>Dashboards</li>
-                <li>Simple business systems</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section class="contact section-spacing" id="contact">
-          <h2>Contact</h2>
-          <p class="contact-intro">Open to learning opportunities, collaborations, and small website projects.</p>
-          <div class="contact-grid">
-            <a href="mailto:harithf10@gmail.com">Email: harithf10@gmail.com</a>
-            <a href="https://wa.me/6013631637" target="_blank" rel="noopener noreferrer">WhatsApp: +60 1363 1637</a>
-            <a href="https://github.com/bachiraxcvii" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/harithfikri" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </div>
+        <section class="section-spacing contact-cta">
+          <h2>Let’s Connect</h2>
+          <p class="muted">Open to learning opportunities, collaborations, and small web projects.</p>
+          <a class="cta-button" href="contact.html">Contact Me</a>
         </section>
       </main>
     </div>
