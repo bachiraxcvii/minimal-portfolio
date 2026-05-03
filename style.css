@@ -45,7 +45,22 @@ body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--b
 .hero-subtitle, .muted { color: var(--muted); max-width: 40ch; }
 
 .editorial-panel { min-height: 420px; background: linear-gradient(130deg, var(--panel-light), var(--panel-mid) 50%, var(--panel-dark)); position: relative; overflow: hidden; }
-.panel-overlay { position: absolute; inset: 0; background: radial-gradient(circle at 20% 24%, rgba(255,255,255,.55), transparent 44%), linear-gradient(to top, rgba(0,0,0,.08), transparent 60%); mix-blend-mode: soft-light; }
+
+/* Homepage hero image block:
+   Upload your image file to /assets/hero-image.jpg
+   The panel keeps a gray fallback when the file is missing. */
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  background-color: #cfcfcf;
+  background-image: url("assets/hero-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+}
+
+.panel-overlay { position: absolute; inset: 0; background: radial-gradient(circle at 20% 24%, rgba(255,255,255,.38), transparent 44%), linear-gradient(to top, rgba(0,0,0,.22), transparent 60%); }
 .red-bar { position: absolute; top: 0; right: 0; width: 22px; height: 100%; background: var(--accent); }
 
 .section-spacing { padding: clamp(2.4rem, 5.5vw, 4.2rem) 0; border-top: 1px solid color-mix(in srgb, var(--text) 12%, transparent); }
