@@ -23,8 +23,18 @@ body.dark-mode {
 body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
 .page-wrapper { width: min(1160px, 92%); margin: 0 auto; }
 
+/* Sticky header: freeze-pane behavior across all pages */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--bg);
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+}
+
+
 /* Shared navigation across multi-page portfolio */
-.navbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.4rem 0 1rem; }
+.navbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 0 0.85rem; }
 .logo { text-decoration: none; color: var(--text); font-size: 1.4rem; font-weight: 800; letter-spacing: 0.08em; }
 .logo-dot { color: var(--accent); }
 .nav-links { list-style: none; display: flex; gap: 1.4rem; padding: 0; margin: 0; }
@@ -57,7 +67,8 @@ body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--b
   object-fit: cover;
   object-position: center;
   background-color: #cfcfcf;
-  filter: grayscale(100%);
+  /* Keep full-color image with a very subtle polish */
+  filter: contrast(1.03) brightness(1.02);
 }
 
 .panel-overlay { position: absolute; inset: 0; background: radial-gradient(circle at 20% 24%, rgba(255,255,255,.38), transparent 44%), linear-gradient(to top, rgba(0,0,0,.22), transparent 60%); }
