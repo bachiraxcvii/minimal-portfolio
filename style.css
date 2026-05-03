@@ -106,8 +106,8 @@ h1.page-title, h2 { margin: 0 0 1rem; font-size: clamp(1.6rem, 3vw, 2.4rem); tex
   }
 
   .hero-photo {
-    /* Mobile crop: move focal point toward center-left so face is more visible */
-    object-position: 38% 28%;
+    /* Mobile crop: center the character face/mask better in the frame */
+    object-position: 56% 30%;
   }
 
   .editorial-panel {
