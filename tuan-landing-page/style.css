@@ -74,7 +74,8 @@ h1, h2, h3 {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  background: linear-gradient(140deg, #eff4f1, #d9e4de 42%, #bdcec4 100%);
+  background: linear-gradient(140deg, rgba(239, 244, 241, 0.55), rgba(217, 228, 222, 0.45) 42%, rgba(189, 206, 196, 0.4) 100%), url("assets/hero-main.jpg") center/cover no-repeat;
+  background-color: #d9e4de;
 }
 
 /* Layered editorial placeholder for a more premium hero visual. */
@@ -140,7 +141,8 @@ h1, h2, h3 {
 .portrait {
   width: 240px; height: 240px; border-radius: 50%;
   border: 2px solid var(--brass);
-  background: radial-gradient(circle at 35% 30%, #f8f8f8, #c8d1cc 70%);
+  background: radial-gradient(circle at 35% 30%, rgba(248,248,248,0.25), rgba(200,209,204,0.15) 70%), url("assets/master-hakim.jpg") center/cover no-repeat;
+  background-color: #c8d1cc;
 }
 .specialty-title { color: var(--green); font-weight: 700; margin-bottom: .4rem; }
 .tag-list { list-style: none; display: flex; flex-wrap: wrap; gap: .6rem; padding: 0; margin: 0; }
@@ -157,6 +159,33 @@ h1, h2, h3 {
 }
 .interior-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; }
 .interior-card { border: 1px solid var(--line); min-height: 110px; display: grid; place-items: center; color: var(--muted); }
+
+/* Interior visuals wired to uploaded assets with subtle dark overlay for readable labels. */
+.interior-card {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.45);
+}
+.interior-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0.1));
+}
+.interior-card {
+  display: grid;
+  place-items: end start;
+  padding: 0.7rem;
+}
+.interior-card > * { position: relative; z-index: 1; }
+.interior-grid .interior-card:nth-child(1) { background-image: url("assets/interior-mirror.jpg"); }
+.interior-grid .interior-card:nth-child(2) { background-image: url("assets/interior-tools-brass.jpg"); }
+.interior-grid .interior-card:nth-child(3) { background-image: url("assets/interior-lounge.jpg"); }
+
 
 .footer { border-top: 1px solid var(--line); padding-top: 2.4rem; }
 .final-cta { text-align: center; padding-bottom: 2rem; }
